@@ -1,9 +1,9 @@
 # Goal: Toss a coin N times and compute the running proportion of heads.
-N = 500	# Specify the total number of flips, denoted N.
+N = 10000	# Specify the total number of flips, denoted N.
 # Generate a random sample of N flips for a fair coin (heads=1, tails=0);
 # the function "sample" is part of R:
 #set.seed(47405) # Uncomment to set the "seed" for the random number generator.
-flipsequence = sample( x=c(0,1) , prob=c(.5,.5) , size=N , replace=TRUE )
+flipsequence = sample( x=c(0,1) , prob=c(.8,.2) , size=N , replace=TRUE )
 # Compute the running proportion of heads:
 r = cumsum( flipsequence ) # The function "cumsum" is built in to R.
 n = 1:N                    # n is a vector.
@@ -17,7 +17,7 @@ plot( n , runprop , type="o" , log="x" ,
 	  xlab="Flip Number" , ylab="Proportion Heads" , cex.lab=1.5 ,
 	  main="Running Proportion of Heads" , cex.main=1.5 )
 # Plot a dotted horizontal line at y=.5, just as a reference line:
-lines( c(1,N) , c(.5,.5) , lty=3 )
+lines( c(1,N) , c(.2,.2) , lty=3 )
 # Display the beginning of the flip sequence. These string and character
 # manipulations may seem mysterious, but you can de-mystify by unpacking
 # the commands starting with the innermost parentheses or brackets and

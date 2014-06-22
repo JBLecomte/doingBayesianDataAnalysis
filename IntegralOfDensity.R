@@ -1,9 +1,9 @@
 # Graph of normal probability density function, with comb of intervals.
 meanval = 0.0             # Specify mean of distribution.
 sdval = 0.2               # Specify standard deviation of distribution.
-xlow  = meanval - 3*sdval # Specify low end of x-axis.
-xhigh = meanval + 3*sdval # Specify high end of x-axis.
-dx = 0.02                 # Specify interval width on x-axis
+xlow  = meanval - sdval # Specify low end of x-axis.
+xhigh = meanval + sdval # Specify high end of x-axis.
+dx = 0.002                 # Specify interval width on x-axis
 # Specify comb points along the x axis:
 x = seq( from = xlow , to = xhigh , by = dx )
 # Compute y values, i.e., probability density at each value of x:
